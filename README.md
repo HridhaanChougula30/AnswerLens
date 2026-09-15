@@ -1,4 +1,4 @@
-# AI Assessment Extraction & Answer Mapping
+# AnswerLens - Assessment Extraction & Answer Mapping
 
 A production-ready AI-powered web application for teachers to upload question papers and student answer sheets, automatically extract questions, map student answers, and provide AI-generated grading and feedback.
 
@@ -25,22 +25,19 @@ A production-ready AI-powered web application for teachers to upload question pa
 ## Tech Stack
 
 ### Frontend
-- **Next.js 15+** with App Router
-- **React 19**
+- **Next.js 14** with App Router
+- **React 18**
 - **TypeScript** with strict mode
 - **Tailwind CSS** for styling
-- **shadcn/ui** for components
 - **Lucide React** for icons
-- **Framer Motion** for animations
 
 ### Backend
 - **Next.js API Routes** for server-side processing
 - **Server Actions** for file uploads and processing
 
 ### AI & Document Processing
-- **Google Gemini API** for multimodal document understanding
+- **Google Gemini 2.0 Flash API** for multimodal document understanding
 - **pdfjs-dist** for PDF rendering and page extraction
-- **Sharp** for image optimization
 
 ### Validation & Type Safety
 - **Zod** for runtime schema validation
@@ -102,8 +99,8 @@ Display Results
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd ai-assessment-extraction
+git clone https://github.com/HridhaanChougula30/AnswerLens.git
+cd AnswerLens
 ```
 
 2. Install dependencies:
@@ -135,6 +132,33 @@ Visit `http://localhost:3000`
 npm run build
 npm start
 ```
+
+## Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. **Push code to GitHub** (already done)
+
+2. **Connect to Vercel:**
+   - Go to [Vercel Dashboard](https://vercel.com)
+   - Click "New Project"
+   - Select your GitHub repository `AnswerLens`
+   - Click "Import"
+
+3. **Configure Environment Variables:**
+   - In Vercel project settings, go to **Environment Variables**
+   - Add `GEMINI_API_KEY` with your API key
+   - Select all environments (Production, Preview, Development)
+   - Click "Save"
+
+4. **Deploy:**
+   - Vercel will automatically build and deploy
+   - Your app will be live at `https://your-project.vercel.app`
+
+### Environment Variables
+
+Required for production:
+- `GEMINI_API_KEY`: Your Google Gemini API key (get free at [Google AI Studio](https://aistudio.google.com/app/apikey))
 
 ## API Endpoints
 
